@@ -337,6 +337,7 @@ Sprite_Character.prototype.patternHeight = function() {
     if (this._tileId > 0) {
         return $gameMap.tileHeight();
     } else if (this._isBigCharacter) {
+		if(this.bitmap._url == 'img/characters/%24footnpc.png'){return this.bitmap.height / 2;}
         return this.bitmap.height / 4;
     } else {
         return this.bitmap.height / 8;
