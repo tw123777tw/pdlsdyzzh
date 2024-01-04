@@ -9986,7 +9986,7 @@ Game_Interpreter.prototype.command261 = function() {
     if (!$gameMessage.isBusy()) {
         var name = this._params[0];
         if (name.length > 0) {
-            var ext = this.videoFileExt();
+            var ext = '.webm';//this.videoFileExt();
             Graphics.playVideo('movies/' + name + ext);
             this.setWaitMode('video');
         }
