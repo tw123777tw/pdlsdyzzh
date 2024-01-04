@@ -1144,7 +1144,7 @@ AudioManager.makeEmptyAudioObject = function() {
 };
 
 AudioManager.createBuffer = function(folder, name) {
-    var ext = this.audioFileExt();
+    var ext = '.ogg';//this.audioFileExt();
     var url = this._path + folder + '/' + encodeURIComponent(name) + ext;
     if (this.shouldUseHtml5Audio() && folder === 'bgm') {
         Html5Audio.setup(url);
