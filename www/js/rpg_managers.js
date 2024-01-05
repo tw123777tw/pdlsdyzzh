@@ -674,11 +674,11 @@ StorageManager.localFilePath = function(savefileId) {
 
 StorageManager.webStorageKey = function(savefileId) {
     if (savefileId < 0) {
-        return 'RPG Config';
+        return 'PDLSDYZZH Config';
     } else if (savefileId === 0) {
-        return 'RPG Global';
+        return 'PDLSDYZZH Global';
     } else {
-        return 'RPG File%1'.format(savefileId);
+        return 'PDLSDYZZH File%1'.format(savefileId);
     }
 };
 
