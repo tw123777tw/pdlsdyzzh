@@ -2924,8 +2924,23 @@ TouchInput._setupEventHandlers = function() {
     document.addEventListener('mousemove', this._onMouseMove.bind(this));
     document.addEventListener('mouseup', this._onMouseUp.bind(this));
     document.addEventListener('wheel', this._onWheel.bind(this));
-    document.addEventListener('touchstart', this._onTouchStart.bind(this));
-    document.addEventListener('touchmove', this._onTouchMove.bind(this));
+//解决设置界面点一下触发两次问题（参考：https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener#option_%E6%94%AF%E6%8C%81%E7%9A%84%E5%AE%89%E5%85%A8%E6%A3%80%E6%B5%8B） Start.
+let passiveSupported = false;
+try {
+  const options = {
+    get passive() {// 该函数会在浏览器尝试访问 passive 值时被调用。
+      passiveSupported = true;
+      return false;
+    },
+  };
+  window.addEventListener("test", null, options);
+  window.removeEventListener("test", null, options);
+} catch (err) {
+  passiveSupported = false;
+}
+    document.addEventListener('touchstart', this._onTouchStart.bind(this), passiveSupported ? {passive: false} : false);
+    document.addEventListener('touchmove', this._onTouchMove.bind(this), passiveSupported ? {passive: false} : false);
+//解决设置界面点一下触发两次问题（参考：https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener#option_%E6%94%AF%E6%8C%81%E7%9A%84%E5%AE%89%E5%85%A8%E6%A3%80%E6%B5%8B） End.
     document.addEventListener('touchend', this._onTouchEnd.bind(this));
     document.addEventListener('touchcancel', this._onTouchCancel.bind(this));
     document.addEventListener('pointerdown', this._onPointerDown.bind(this));
