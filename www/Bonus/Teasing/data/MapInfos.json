@@ -1,0 +1,13 @@
+[
+null,
+{"id":1,"expanded":true,"name":"开幕介绍","order":1,"parentId":0,"scrollX":1786.909090909091,"scrollY":1003.6363636363636},
+{"id":2,"expanded":false,"name":"开局","order":2,"parentId":1,"scrollX":1786.909090909091,"scrollY":1003.6363636363636},
+{"id":3,"expanded":false,"name":"坡道","order":3,"parentId":1,"scrollX":1786.909090909091,"scrollY":1003.6363636363636},
+{"id":4,"expanded":false,"name":"鞋上","order":4,"parentId":1,"scrollX":832,"scrollY":640},
+{"id":5,"expanded":false,"name":"食堂","order":5,"parentId":1,"scrollX":832,"scrollY":640},
+{"id":6,"expanded":false,"name":"室外","order":6,"parentId":1,"scrollX":832,"scrollY":640},
+{"id":7,"expanded":false,"name":"室内","order":8,"parentId":1,"scrollX":819,"scrollY":460},
+{"id":8,"expanded":false,"name":"室外选择","order":7,"parentId":1,"scrollX":1786.909090909091,"scrollY":1003.6363636363636},
+{"id":9,"expanded":false,"name":"后续","order":9,"parentId":1,"scrollX":832,"scrollY":640},
+{"id":10,"expanded":false,"name":"三个选项","order":10,"parentId":1,"scrollX":0,"scrollY":0}
+]
