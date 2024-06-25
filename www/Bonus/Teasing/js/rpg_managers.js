@@ -773,11 +773,11 @@ StorageManager.localFilePath = function(savefileId) {
 
 StorageManager.webStorageKey = function(savefileId) {
     if (savefileId < 0) {
-        return 'RPG Config';
+        return 'PDLSDYZZH_Teasing Config';
     } else if (savefileId === 0) {
-        return 'RPG Global';
+        return 'PDLSDYZZH_Teasing Global';
     } else {
-        return 'RPG File%1'.format(savefileId);
+        return 'PDLSDYZZH_Teasing File%1'.format(savefileId);
     }
 };
 

@@ -773,11 +773,11 @@ StorageManager.localFilePath = function(savefileId) {
 
 StorageManager.webStorageKey = function(savefileId) {
     if (savefileId < 0) {
-        return 'RPG Config';
+        return 'PDLSDYZZH_Cake Config';
     } else if (savefileId === 0) {
-        return 'RPG Global';
+        return 'PDLSDYZZH_Cake Global';
     } else {
-        return 'RPG File%1'.format(savefileId);
+        return 'PDLSDYZZH_Cake File%1'.format(savefileId);
     }
 };
 
