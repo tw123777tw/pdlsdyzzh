@@ -503,6 +503,13 @@ Scene_Title.prototype.createCommandWindow = function() {
     this._commandWindow.setHandler('newGame',  this.commandNewGame.bind(this));
     this._commandWindow.setHandler('continue', this.commandContinue.bind(this));
     this._commandWindow.setHandler('options',  this.commandOptions.bind(this));
+//JYSDTR:
+    this._commandWindow.setHandler('Brave', (function(){
+        this._commandWindow.close();
+        this.fadeOutAll();
+        setTimeout('window.location = "../../"',800);
+    }).bind(this));
+//JYSDTR.
     this.addWindow(this._commandWindow);
 };
 
