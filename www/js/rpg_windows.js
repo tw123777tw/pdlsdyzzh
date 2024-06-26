@@ -5740,6 +5740,8 @@ Window_TitleCommand.prototype.makeCommandList = function() {
     this.addCommand(TextManager.newGame,   'newGame');
     this.addCommand(TextManager.continue_, 'continue', this.isContinueEnabled());
     this.addCommand(TextManager.options,   'options');
+    this.addCommand('☛品尝蛋糕', 'Cake');//JYSDTR
+    this.addCommand('☛转生之我', 'Teasing');//JYSDTR
 };
 
 Window_TitleCommand.prototype.isContinueEnabled = function() {

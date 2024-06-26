@@ -312,6 +312,18 @@ Scene_Title.prototype.createCommandWindow = function() {
     this._commandWindow.setHandler('newGame',  this.commandNewGame.bind(this));
     this._commandWindow.setHandler('continue', this.commandContinue.bind(this));
     this._commandWindow.setHandler('options',  this.commandOptions.bind(this));
+//JYSDTR:
+    this._commandWindow.setHandler('Cake', (function(){
+        this._commandWindow.close();
+        this.fadeOutAll();
+        setTimeout('window.location = "./Bonus/Cake/"',800);
+    }).bind(this));
+    this._commandWindow.setHandler('Teasing', (function(){
+        this._commandWindow.close();
+        this.fadeOutAll();
+        setTimeout('window.location = "./Bonus/Teasing/"',800);
+    }).bind(this));
+//JYSDTR.
     this.addWindow(this._commandWindow);
 };
 
