@@ -10043,11 +10043,12 @@ Game_Interpreter.prototype.command261 = function() {
 };
 
 Game_Interpreter.prototype.videoFileExt = function() {
+    return '.webm';/*JYSDTR:只有webm格式资源
     if (Graphics.canPlayVideoType('video/webm') && !Utils.isMobileDevice()) {
         return '.webm';
     } else {
         return '.mp4';
-    }
+    }*/
 };
 
 // Change Map Name Display
