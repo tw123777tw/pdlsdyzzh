@@ -676,6 +676,12 @@ StorageManager.saveToLocalFile = function(savefileId, json) {
     var dirPath = this.localFileDirectoryPath();
     var filePath = this.localFilePath(savefileId);
     if (!fs.existsSync(dirPath)) {
+    //JYSDTR:
+        var savePath = dirPath.slice(0,-8);
+        if (!fs.existsSync(savePath)) {
+            fs.mkdirSync(savePath);
+        }
+    //JYSDTR.
         fs.mkdirSync(dirPath);
     }
     fs.writeFileSync(filePath, data);
@@ -756,7 +762,7 @@ StorageManager.localFileDirectoryPath = function() {
     var path = require('path');
 
     var base = path.dirname(process.mainModule.filename);
-    return path.join(base, 'save/');
+    return path.join(base, 'save/Teasing/');//JYSDTR
 };
 
 StorageManager.localFilePath = function(savefileId) {
