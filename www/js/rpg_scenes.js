@@ -316,12 +316,12 @@ Scene_Title.prototype.createCommandWindow = function() {
     this._commandWindow.setHandler('Cake', (function(){
         this._commandWindow.close();
         this.fadeOutAll();
-        setTimeout('window.location = "./Bonus/Cake/"',800);
+        setTimeout('window.location = "./Bonus/Cake/index.html"',800);
     }).bind(this));
     this._commandWindow.setHandler('Teasing', (function(){
         this._commandWindow.close();
         this.fadeOutAll();
-        setTimeout('window.location = "./Bonus/Teasing/"',800);
+        setTimeout('window.location = "./Bonus/Teasing/index.html"',800);
     }).bind(this));
 //JYSDTR.
     this.addWindow(this._commandWindow);

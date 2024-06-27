@@ -507,7 +507,7 @@ Scene_Title.prototype.createCommandWindow = function() {
     this._commandWindow.setHandler('Brave', (function(){
         this._commandWindow.close();
         this.fadeOutAll();
-        setTimeout('window.location = "../../"',800);
+        setTimeout('window.location = "../../index.html"',800);
     }).bind(this));
 //JYSDTR.
     this.addWindow(this._commandWindow);
