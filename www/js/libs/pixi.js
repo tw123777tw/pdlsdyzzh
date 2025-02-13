@@ -8118,7 +8118,7 @@ PIXI.WebGLRenderer.prototype.initContext = function()
         // fail, not able to get a context
         throw new Error('This browser does not support webGL. Try using the canvas renderer');
     }
-
+PIXI.JYSDTR_MAX_TEXTURE_SIZE = gl.getParameter(gl.MAX_TEXTURE_SIZE);//JYSDTR's rework.
     this.glContextId = gl.id = PIXI.WebGLRenderer.glContextId ++;
 
     PIXI.glContexts[this.glContextId] = gl;

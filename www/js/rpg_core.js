@@ -1051,7 +1051,8 @@ Bitmap.prototype._drawTextBody = function(text, tx, ty, maxWidth) {
  */
 Bitmap.prototype._onLoad = function() {
     this._isLoading = false;
-    this.resize(this._image.width, this._image.height);
+//    this.resize(this._image.width, this._image.height);
+    this.resize(this._image.width > PIXI.JYSDTR_MAX_TEXTURE_SIZE? PIXI.JYSDTR_MAX_TEXTURE_SIZE: this._image.width, this._image.height > PIXI.JYSDTR_MAX_TEXTURE_SIZE? PIXI.JYSDTR_MAX_TEXTURE_SIZE: this._image.height);//PIXI.JYSDTR_MAX_TEXTURE_SIZE -> pixi.js
     this._context.drawImage(this._image, 0, 0);
     this._setDirty();
     this._callLoadListeners();
